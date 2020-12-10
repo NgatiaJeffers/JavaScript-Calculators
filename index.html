@@ -12,7 +12,36 @@
 </head>
 <body>
     <h1 class="col-md-12 col-sxl-12 title">A Calculator Built by JeffeDev: </h1>
-    <a href="bmi.html">BMI Calculator</a>
-    <script src="js/app.js"></script>
+    <div class="con">
+        <p id="result1"></p>
+    </div>
+    
+    <script>
+        var operator = prompt("Select Operator (* + - /)");
+var number1 = parseInt(prompt("Ente First NUmber:"));
+var number2 = parseInt(prompt("Enter Second Number:"));
+
+var result;
+if (operator == "*") {
+    result = number1 * number2;
+    document.getElementById("result1").innerHTML="The total number is " + result;
+} else if (operator == "+") {
+    result = number1 + number2;
+    document.getElementById("result1").innerHTML="The total number is " + result;
+} else if (operator == "-") {
+    result = number1 - number2;
+    document.getElementById("result1").innerHTML="The total number is " + result;
+} else if (operator == "/") {
+    result = number1 / number2;
+    document.getElementById("result1").innerHTML="The total number is " + result;
+    // document.write("The total number is " + result);
+} else {
+    // document.write("Incorrect Operator");
+    document.getElementById("result1").innerHTML="Incorrect Operator";
+}
+    </script>
+    <ul>
+    <li><a href="bmi.html">BMI Calculator</a></li>
+    </ul>
 </body>
 </html>
